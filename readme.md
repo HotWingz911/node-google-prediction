@@ -1,4 +1,6 @@
-Access Google BigQuery using a service account from node.js
+Access Google Prediction using a service account from node.js to avoid user by user authentication and to use trained models specific to a user
+Library was taken from Google BigQuery written by Gustavo Machado, adapted to be used with the completely different prediction API.
+Used mainly for seeing how to authenticate from node using a service acccount.#
 
 
 
@@ -17,7 +19,18 @@ var prediction = require('google-prediction'),
 
 // ... use of library methods ...
 
-```
+Insert Training Data
+
+client.predict.insert(id, storageDataLocation)
+
+Retrieve Data Model learning list
+
+client.predict.list
+
+
+Retrieve prediction
+
+client.predict.predict(model, query)
 
 # Tests
 In order to execute the tests, first set up an environment variable 'GOOGLE_ISS' with the ISS taken from your Google API Service Account (notice that you have to register your Google API account for BigQuery first), something like this: "abcdefghij@developer.gserviceaccount.com".
