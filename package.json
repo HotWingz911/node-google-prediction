@@ -1,0 +1,41 @@
+{
+	"name": "google-prediction",
+	"description": "node.js package for accessing google prediction through a service account",
+	"version": "0.1.1",
+  "contributors": [
+    {
+      "name": "Andrew Purchas",
+      "email": "a.purchas@gmail.com"
+    },
+    {
+      "name": "Gustavo Machado",
+      "email": "machadogj@gmail.com"
+    },
+    {
+      "name": "Mathew Rodley",
+      "email": "mathew@rodley.com.au"
+    },
+  ],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/poozleton/node-google-prediction.git"
+	},
+	"engines": {
+    	"node": ">= 0.6.16"
+	},
+	"keywords": [
+		"google",
+		"prediction"
+	],
+	"dependencies": {
+		"jwt-sign": "*",
+		"request": "*"
+	},
+	"scripts": {
+		"test": "./node_modules/.bin/mocha test/*.js --timeout 10000 --reporter spec"
+	},
+	"devDependencies": {
+    	"mocha": "*"
+  	},
+  	"main":"./index"
+}
